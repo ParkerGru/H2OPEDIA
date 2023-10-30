@@ -2,8 +2,8 @@
 <html class="no-js theme-{{ preferences.get_value('simple_style') or 'auto' }} center-aligment-{{ preferences.get_value('center_alignment') and 'yes' or 'no' }}" lang="{{ locale_rfc5646 }}" {% if rtl %} dir="rtl"{% endif %}>
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="SearXNG — a privacy-respecting, open metasearch engine">
-  <meta name="keywords" content="SearXNG, search, search engine, metasearch, meta search">
+  <meta name="description" content="H2OPEDIA - Saving the water one search at a time">
+  <meta name="keywords" content="water, conservation, search engine, ocean, charitable">
   <meta name="generator" content="searxng/{{ searx_version }}">
   <meta name="referrer" content="no-referrer">
   <meta name="robots" content="noarchive">
@@ -50,7 +50,7 @@
       {%- endblock -%}
       {%- block linkto_donate -%}
         {%- if donation_url -%}
-        <a href="{{ donation_url }}" class="link_on_top_donate">{{ icon_big('heart-outline') }}<span>{{ _('Donate') }}</span></a>
+        <a href="https://donate.oceanconservancy.org/page/137392/donate/1?_ga=2.219170394.210010668.1698708665-1636108574.1698708665" class="link_on_top_donate">{{ icon_big('heart-outline') }}<span>{{ _('Donate') }}</span></a>
         {%- endif -%}
       {%- endblock -%}
       {%- block linkto_preferences -%}
@@ -64,8 +64,8 @@
   </main>
   <footer>
     <p>
-    {{ _('Powered by') }} <a href="{{ url_for('info', pagename='about') }}">searxng</a> - {{ searx_version }} — {{ _('a privacy-respecting, open metasearch engine') }}<br/>
-        <a href="{{ searx_git_url }}">{{ _('Source code') }}</a>
+    {{ _('Forked from') }} <a href="{{ url_for('info', pagename='about') }}">searxng</a> - {{ searx_version }} — {{ _('a privacy-respecting, open metasearch engine') }}<br/>
+        <a href="https://github.com/ParkerGru/H2OPEDIA">{{ _('Source code') }}</a>
         | <a href="{{ get_setting('brand.issue_url') }}">{{ _('Issue tracker') }}</a>
         {% if enable_metrics %}| <a href="{{ url_for('stats') }}">{{ _('Engine stats') }}</a>{% endif %}
         {% if get_setting('brand.public_instances') %}
